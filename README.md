@@ -1,0 +1,1 @@
+scrapy-feedexporter-google-drive is a scrapy plugin that allows you to export scrapy items to a google drive account.
