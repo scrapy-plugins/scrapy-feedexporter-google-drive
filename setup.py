@@ -9,6 +9,7 @@ setup(
         'google-auth-httplib2',
         'google-auth-oauthlib',
         'tabulate',
+        'pydrive',
     ],
     requires=['scrapy',]
 )
