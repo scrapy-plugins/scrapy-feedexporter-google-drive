@@ -11,5 +11,5 @@ setup(
         'tabulate',
         'pydrive',
     ],
-    requires=['scrapy',]
+    requires=['scrapy', 'pydrive']
 )
