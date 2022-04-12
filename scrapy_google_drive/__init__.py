@@ -1,7 +1,7 @@
 import logging
 
-from pydrive.auth import GoogleAuth
-from pydrive.drive import GoogleDrive
+from pydrive2.auth import GoogleAuth
+from pydrive2.drive import GoogleDrive
 
 from scrapy.extensions.feedexport import BlockingFeedStorage
 

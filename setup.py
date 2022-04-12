@@ -5,11 +5,7 @@ setup(
     packages=['scrapy_google_drive'],
     install_requires=[
         'scrapy',
-        'google-api-python-client',
-        'google-auth-httplib2',
-        'google-auth-oauthlib',
-        'tabulate',
-        'pydrive',
+        'pydrive2',
     ],
-    requires=['scrapy', 'pydrive']
+    requires=['scrapy', 'pydrive2']
 )
