@@ -51,7 +51,7 @@ class GoogleDriveFeedStorage(BlockingFeedStorage):
     def from_crawler(cls, crawler, uri, *, feed_options=None):
         return cls(
             uri,
-            crawler.settings.get("SERVICE_ACCOUNT_CREDENTIALS_JSON"),
+            crawler.settings.get("GDRIVE_SERVICE_ACCOUNT_CREDENTIALS_JSON"),
             feed_options=feed_options,
         )
 
