@@ -42,10 +42,10 @@ class GoogleDriveFeedStorage(BlockingFeedStorage):
             )
             self.service = build("drive", "v3", credentials=self.credentials)
         except Exception as e:
-            logger.exception(e)
+            logger.exception("Could not load the service account credentials")
             raise NotConfigured(
                 "Please provide valid service account credentials in json string format"
-            )
+            ) from e
 
     @classmethod
     def from_crawler(cls, crawler, uri, *, feed_options=None):
@@ -58,7 +58,7 @@ class GoogleDriveFeedStorage(BlockingFeedStorage):
     def _store_in_thread(self, file):
         file.seek(0)
         metadata = {"name": self.file_name, "parents": [self.folder_id]}
-        mimetype, encoding = mimetypes.guess_type(self.file_name)
+        mimetype, _ = mimetypes.guess_type(self.file_name)
         if not mimetype:
             mimetype = "application/octet-stream"
             logger.warning(
